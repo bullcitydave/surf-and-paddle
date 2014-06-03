@@ -3,32 +3,73 @@
   <head>
     <title>Surf & Paddle Co. Blog</title>
     <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Condensed' rel='stylesheet' type='text/css'>
   </head>
   <style>
     body {
       width: 965px;
+      font-family: 'Asap', Tahoma, sans-serif;
     }
 
     h1 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-transform:uppercase;
+      font-weight:lighter;
+      font-size:4.5em;
 
     }
 
-
-    img {
+    h2 {
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 3.2em;
+    }
+    img
+    {
       position: relative;
       width=300px;
     }
 
+    .menutitle {
+      font-family: Myriad Pro, Tahoma, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+
+    .menubar li{
+      list-style: none;
+      font-family: Oswald;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: 400;
+      float:right;
+      padding: 8px;
+    }
 
 
+    ul.menubar li a {
+      text-decoration: none;
+    }
+
+    #wrapper{
+      width:965px;
+    }
+
+    #blog-head{
+      height:400px;
+      background:aqua;
+    }
 
   </style>
 
 <body>
 
-  <div class="wrapper">
+  <div id="wrapper">
 
-    <div class="blog-head">
+    <div id="blog-head">
       <div class="menutitle">
         <img src="#">Surf & Paddle Co. Blog</span>
 
@@ -36,9 +77,10 @@
 
       <div class="menubar">
         <ul>
-          <li>About</li>
+          <li><img src="#"></li>
           <li>Search</li>
-          <li><img src="#"</li>
+          <li>About</li>
+
         </ul>
       </div>
 
