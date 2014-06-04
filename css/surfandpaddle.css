@@ -1,4 +1,17 @@
 
+  header {
+    background:#0D73b6;
+    height:382px;
+    /* tried this
+    background:
+    linear-gradient(
+      rgba(24, 87, 150, 1.0000),
+      rgba(24, 87, 150, 1.0000)
+    ), url(../images/tulum-waves.jpg) no-repeat center center fixed; */
+    background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
   h1 {
     font-family: 'PT Sans', Arial, sans-serif;
     text-transform:uppercase;
@@ -48,6 +61,7 @@
   #wrapper{
     width:100%;
     font-family: 'Asap', Tahoma, sans-serif;
+    margin:auto;
   }
 
   #blogTitles{
@@ -58,48 +72,60 @@
     width:100%;
   }
 
-  #top{
-    background:#0D73b6;
-    height:382px;
-    /* tried this
-    background:
-    linear-gradient(
-      rgba(24, 87, 150, 1.0000),
-      rgba(24, 87, 150, 1.0000)
-    ), url(../images/tulum-waves.jpg) no-repeat center center fixed; */
-    background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
-    background-size: cover;
-  }
+
 
   div.main{
     background:#fafcfe;
   }
 
-  #companyHeader {
-    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
+
+
+  nav#headerNav{
     float:left;
-    padding-left:100px;
-    width:40%;
-    margin-top: 18px;
-    vertical-align: top;
-    color:#053251;
+    margin:0px 100px 0px 100px;
+    width:765px;
   }
 
-  #navbar{
-    float:right;
-    padding-right:114px;
-  }
-
-  #navbar li{
+  nav#headerNav li{
     list-style: none;
     font-family: 'Oswald';
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
+    float:left;
+    padding: 18px 4px 0px 0px;
+    color:#053251;
+  }
+
+  nav#headerNav li#companyText {
+    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    float:left;
+    margin-top:5px;
+    color:#053251;
+  }
+
+  nav#headerNav li.navMenu {
+    margin:3px 0px 0px 8px;
     float:right;
-    padding: 14px 0px 0px 14px;
+  }
+
+  nav#headerNav li#companyText {
+    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    float:left;
+    margin-top:5px;
+    color:#053251;
+  }
+
+  nav#headerNav li#searchIcon {
+    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    float:right;
+    margin-top:2px;
     color:#053251;
   }
 
@@ -114,12 +140,6 @@
     padding: 0px 7px 0px 7px;
     color:#bfcbd4;
   }
-
-
-  #searchIcon{
-    padding-left: -8px !important;
-  }
-
 
   img#logo{
     content:url("../images/surfandpaddle_logo.PNG");
@@ -181,14 +201,20 @@
     color: #fafcfe;
     font-size: 11px;
     text-align:center;
-    padding:10px;
     float:left;
-    padding: 4px 6px 4px 6px;
     margin: 4px;
+    width:150px;
   }
 
-  div.entryFooterLink#iconShare{
+  div.entryFooterLink#share{
     background: #3d87c5;
+  }
+
+
+  i.fa{
+    float:left;
+    line-height:1.2;
+    padding-left: 2px;
   }
 
   div.footer{
@@ -197,19 +223,23 @@
     margin-left:100px;
   }
 
-  #iconCommenti{
+  #iconComment{
     background: #5e6970;
     float:left;
   }
 
-  #iconSavei{
+  #iconSave{
     background: #5e6970;
     float:left;
   }
 
-  #iconSharei{
+  #iconShare{
     background: #053251;
     float:left;
+  }
+
+  #txtComment, #txtSave, #txtShare{
+    padding-top:8px;
   }
 
   div.entryFooter i{
