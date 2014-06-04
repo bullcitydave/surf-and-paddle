@@ -1,9 +1,3 @@
-<style>
-
-<!--  body{
-    margin: 0 !important;  cannot override user agent stylesheet with margin=8
-}
--->
 
   h1 {
     font-family: 'PT Sans', Arial, sans-serif;
@@ -27,7 +21,6 @@
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     line-height: 52px;
-    width: 600px;
     padding-top: 45px;
     color: #053251;
   }
@@ -38,7 +31,7 @@
     text-align:center;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    color: #053251;
+    color: #3d87c5;
   }
 
   blockquote {
@@ -50,38 +43,6 @@
     -webkit-margin-start: 5px;
     -webkit-margin-end: 5px;
     margin: 1em 5px 1em 5px;
-  }
-
-  #menuTitle {
-    font-family: 'Myriad Pro', Tahoma, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    float:left;
-    padding-left:100px;
-    width:40%;
-    margin-top: 18px;
-    vertical-align: top;
-    color:#053251;
-  }
-
-  #menubar{
-    float:right;
-    padding-right:114px;
-  }
-
-  #menubar li{
-    list-style: none;
-    font-family: 'Oswald';
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    float:right;
-    padding: 14px 0px 0px 14px;
-    color:#053251;
-  }
-
-  #searchIcon{
-    padding-left: -8px !important;
   }
 
   #wrapper{
@@ -116,6 +77,52 @@
     background:#fafcfe;
   }
 
+  #companyHeader {
+    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    float:left;
+    padding-left:100px;
+    width:40%;
+    margin-top: 18px;
+    vertical-align: top;
+    color:#053251;
+  }
+
+  #navbar{
+    float:right;
+    padding-right:114px;
+  }
+
+  #navbar li{
+    list-style: none;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    float:right;
+    padding: 14px 0px 0px 14px;
+    color:#053251;
+  }
+
+  div.author{
+  text-align:center;
+  }
+
+  ul.authorSocialList li{
+    list-style: none;
+    font-size: 10px;
+    float:left;
+    padding: 0px 7px 0px 7px;
+    color:#bfcbd4;
+  }
+
+
+  #searchIcon{
+    padding-left: -8px !important;
+  }
+
+
   img#logo{
     content:url("images/surfandpaddle_logo.PNG");
     height:45px;
@@ -125,7 +132,7 @@
   }
 
   img.authorIcon{
-    content:url("images/author-icon.gif");
+    content:url("images/annie-dolphin.gif");
     height:30px;
     width:30px;
     margin-top: 8px;
@@ -137,6 +144,16 @@
     width:185px;
     height:200px;
   }
+
+  img.authorAvatar{
+    content:url("images/annie-dolphin.gif");
+    height:60px;
+    width:60px;
+    margin-top: 8px;
+    margin-right: 5px;
+    text-align:center;
+  }
+
   div.blogEntry{
     width: 475px;
     margin-left: 100px;
@@ -160,8 +177,6 @@
     margin-left: 100px;
   }
 
-  div.entryFooter{
-  }
 
   div.entryFooterLink{
     background: #bfcbd4;
@@ -199,8 +214,6 @@
     float:left;
   }
 
-
-
   div.entryFooter i{
     margin: 2px;
   }
@@ -208,6 +221,12 @@
   span.blogAuthor{
     color: #3d87c5;
     font-size: 11px;
+  }
+
+  p.authorName{
+    color: #3d87c5;
+    font-size: 12px;
+    text-transform:uppercase;
   }
 
   span.blogDate {
@@ -225,8 +244,45 @@
     -webkit-padding-start: 0px;
   }
 
+  div.adblock_square {
+    clear:both;
+    margin:30px 100px 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  img.ad_square {
+    clear:both;
+    height:156px;
+    width:156px;
+    text-align:center;
+  }
+
+  p.ad_caption {
+    text-align:right;
+    color: #bfcbd4;
+    font-size: 10px;
+    text-align:right;
+    width:156px;
+  }
+
+  span.ad_caption a {
+    color: #bfcbd4;
+  }
 
 
-
-
-</style>
+  div.sidebarSection {
+    clear:both;
+    margin-top:30px;
+  }
+  .sidebarSectionHeader {
+    text-transform:uppercase;
+    color:#3d87c5;
+    font-family: 'Oswald', 'Arial', sans-serif;
+    font-size: 14px;
+  }
+  .sidebarText {
+    color: #bfcbd4;
+    font-size:12px;
+    line-height:18px;
+  }
