@@ -1,0 +1,110 @@
+<style>
+
+<!--  body{
+    margin: 0 !important;  cannot override user agent stylesheet with margin=8
+}
+-->
+
+  h1 {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    text-transform:uppercase;
+    font-weight:lighter;
+    font-size:81px;
+    text-align:center;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    line-height:81px;
+    color: #fafcfe;
+  }
+
+  h2 {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 51px;
+    text-align:center;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  h5  {
+    font-weight: normal;
+    font-size: 11px;
+    text-align:center;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+  #menuTitle {
+    font-family: 'Myriad Pro', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    float:left;
+    padding-left:100px;
+    width:40%;
+    margin-top: 18px;
+    vertical-align: top;
+  }
+
+  #menubar{
+    float:right;
+    padding-right:100px;
+  }
+
+  #menubar li{
+    list-style: none;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    float:right;
+    padding: 14px 8px 0px 0px;
+  }
+
+  #wrapper{
+    width:960px;
+    font-family: 'Asap', Tahoma, sans-serif;
+    margin-top: -8px;
+    margin-left: -8px;
+  }
+
+  #blogTitles{
+    text-align:center;
+    clear:both;
+    position:absolute;
+    margin-top:154px;
+    width:100%;
+  }
+
+  #top{
+    background:#0D73b6;
+    height:382px;
+    /* tried this
+    background:
+    linear-gradient(
+      rgba(24, 87, 150, 1.0000),
+      rgba(24, 87, 150, 1.0000)
+    ), url(images/tulum-waves.jpg) no-repeat center center fixed; */
+    background:url(images/tulum-waves.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  #main{
+    background:#fafcfe;
+  }
+
+
+  .blogEntry{
+    margin-left: 50px;
+    width: 600px;
+  }
+
+  ul{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+
+</style>
