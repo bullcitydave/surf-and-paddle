@@ -6,7 +6,9 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="surfandpaddle.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   </head>
 
 
@@ -18,17 +20,16 @@
     <div id="top">
       <!-- <div id="topMenu"> -->
         <div id="menuTitle">
-          <img src="#">Surf & Paddle Co. Blog
+          <img id="logo">Surf & Paddle Co. Blog
         </div>
 
         <div id="menubar">
           <ul>
-            <li><img src="#"></li>
+            <li id="searchIcon"><i class="fa fa-search fa-rotate-90"></i></li>
             <li>Search</li>
             <li>About</li>
           </ul>
         </div>
-  <!--  </div> -->
 
       <div id="blogTitles">
           <h1>Surf & Paddle Co.</h1>
@@ -40,29 +41,37 @@
 
     <div class="main">
 
-      <div class="blog-entry">
+      <div class="blogEntry">
           <div>
           <h2>A Fantastic Engaging Headline Goes Here</h2>
 
-          <img src="">Annie Dolphin
-          on Monday, June 7th 9:09pm
+          <img class="authorIcon"><span class="blogAuthor">Annie Dolphin</span><span class="blogDate"> on Wednesday, June 4th 1:27am</span>
         </div>
 
-        <div class="entry-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu nunc mi. Nulla pharetra diam sit amet laoreet malesuada. Vivamus adipiscing, nisl sed tempor fringilla, tortor sem bibendum purus, vitae fringilla velit justo nec elit. Nunc facilisis orci in libero lobortis, sit amet sagittis diam tincidunt. </p>
-          <div class="pullquote">
-            "This is a pull quote from the article."
-          </div>
+        <div class="entryContent">
+          <p>Lorem ipsum dolor sit amet, dave made a valiant effort, but, alas, he can do no more tonight. At the very least, he should commit his latest changes and post something, lest he lie down, doze off, and not awken until 6:01. Consectetur adipiscing elit. Duis eu nunc mi. Nulla pharetra diam sit amet laoreet malesuada. Vivamus adipiscing, nisl sed tempor fringilla, tortor sem bibendum purus, vitae fringilla velit justo nec elit. Nunc facilisis orci in libero lobortis, sit amet sagittis diam tincidunt. </p>
+          <blockquote>"This is a pull quote from the article."</blockquote>
           <p>Sed in urna at leo congue semper sit amet lobortis nibh. Nullam dapibus, ipsum sed iaculis varius, sapien orci mollis diam, eu sagittis nisi libero commodo tellus. Nullam at arcu vitae sapien vulputate porttitor fermentum eu metus. Quisque porta felis eros, quis eleifend neque mollis vel. Quisque ut semper mi, in viverra augue. Suspendisse neque nibh, aliquam at consequat sed, vehicula vestibulum leo. Vestibulum vestibulum condimentum tempor.</p>
           <p>Maecenas sed nunc ligula. Aenean lorem arcu, iaculis in purus eu, pretium sodales orci. Nulla volutpat ut diam non vestibulum. Nam iaculis dictum nibh, id condimentum orci varius ac. Fusce id mi at purus mollis accumsan.</p>
         </div>
 
-        <div class="entry-footer">
-          <a href="#"><img id="icon-comments" src="#">Read Comments</a>
-          <a href="#"><img id="icon-later" src="#">Read Later</a>
-          <a href="#"><img id="icon-share" src="#">Share This Post</a>
-        </div>
-      </div>
+        <div class="entryFooter">
+          <div class="entryFooterLink" id="iconComment">
+            <div id="iconCommenti"><i class="fa fa-comment"></i></div>
+            <div id="txtComment">Read Comments</div>
+          </div>
+         <div class="entryFooterLink" id="iconSave">
+           <div id="iconSavei"><i class="fa fa-cloud-upload"></i></div>
+           <div id="txtSave">Read Later</div>
+         </div>
+         <div class="entryFooterLink" id="iconShare">
+           <div id="iconSharei"><i class="fa fa-share-square-o"></i></div>
+           <div id="txtShare">Share This Post</div>
+         </div>
+       </div>
+     </div>
+
+
 
         <div class="sidebar">
           <div class="author">
@@ -85,21 +94,21 @@
         </div>
       </div>
 
-      <div id="popular_posts">
+      <div class="popularPosts">
         <h2>Most Popular Posts</h2>
         <div class="pop_post_highlight">
-          <img class="pop_post_image" src="#">
+          <img class="popPostImage" src="#">
           <span class="pop_post_title">Another Cool Post</span>
-          <img class="pop_post_image" src="#">
+          <img class="popPostImage" src="#">
           <span class="pop_post_title">Post Title</span>
-          <img class="pop_post_image" src="#">
+          <img class="popPostImage" src="#">
           <span class="pop_post_title">Here's Another Longer Post Title</span>
-          <img class="pop_post_image" src="#">
+          <img class="popPostImage" src="#">
           <span class="pop_post_title">Oh Cool a post!</span>
         </div>
       </div>
 
-      <div id="footer">
+      <div class="footer">
         <div id="company_footer">
           <img src="#">The Ironyard Copyright 2014, All Rights Reserved
         </div>

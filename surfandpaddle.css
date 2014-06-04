@@ -6,7 +6,7 @@
 -->
 
   h1 {
-    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     text-transform:uppercase;
     font-weight:lighter;
     font-size:81px;
@@ -15,16 +15,21 @@
     -webkit-margin-after: 0;
     line-height:81px;
     color: #fafcfe;
+    letter-spacing: -0.5px;
   }
 
   h2 {
     font-family: 'Oswald';
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 51px;
-    text-align:center;
+    font-size: 46px;
+    text-align:left;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
+    line-height: 52px;
+    width: 600px;
+    padding-top: 45px;
+    color: #053251;
   }
 
   h5  {
@@ -33,7 +38,19 @@
     text-align:center;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-}
+    color: #053251;
+  }
+
+  blockquote {
+    color: #3d87c5;
+    font-size: 22px;
+    text-transform:uppercase;
+    border-left:solid 2px #bfcbd4;
+    padding: 12px;
+    -webkit-margin-start: 5px;
+    -webkit-margin-end: 5px;
+    margin: 1em 5px 1em 5px;
+  }
 
   #menuTitle {
     font-family: 'Myriad Pro', Tahoma, Arial, sans-serif;
@@ -44,21 +61,27 @@
     width:40%;
     margin-top: 18px;
     vertical-align: top;
+    color:#053251;
   }
 
   #menubar{
     float:right;
-    padding-right:100px;
+    padding-right:114px;
   }
 
   #menubar li{
     list-style: none;
     font-family: 'Oswald';
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     float:right;
-    padding: 14px 8px 0px 0px;
+    padding: 14px 0px 0px 14px;
+    color:#053251;
+  }
+
+  #searchIcon{
+    padding-left: -8px !important;
   }
 
   #wrapper{
@@ -73,7 +96,7 @@
     clear:both;
     position:absolute;
     margin-top:154px;
-    width:100%;
+    width:965px;
   }
 
   #top{
@@ -89,15 +112,110 @@
     background-size: cover;
   }
 
-  #main{
+  div.main{
     background:#fafcfe;
   }
 
-
-  .blogEntry{
-    margin-left: 50px;
-    width: 600px;
+  img#logo{
+    content:url("images/surfandpaddle_logo.PNG");
+    height:45px;
+    width:45px;
+    margin-top: -15px;
+    margin-right: 5px;
   }
+
+  img.authorIcon{
+    content:url("images/author-icon.gif");
+    height:30px;
+    width:30px;
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+
+  img.popPostImage{
+    float:left;
+    width:185px;
+    height:200px;
+  }
+  div.blogEntry{
+    width: 475px;
+    margin-left: 100px;
+    float:left;
+  }
+
+  div.sidebar{
+    float:right;
+    width: 300px;
+    padding-top: 45px;
+  }
+
+  div.entryContent{
+    color: #626769;
+    font-size:12px;
+    line-height:18px;
+  }
+
+  div.popularPosts{
+    clear: both;
+    margin-left: 100px;
+  }
+
+  div.entryFooter{
+  }
+
+  div.entryFooterLink{
+    background: #bfcbd4;
+    color: #fafcfe;
+    font-size: 11px;
+    text-align:center;
+    padding:10px;
+    float:left;
+    padding: 4px 6px 4px 6px;
+    margin: 4px;
+  }
+
+  div.entryFooterLink#iconShare{
+    background: #3d87c5;
+  }
+
+  div.footer{
+    clear:both;
+    text-align: center;
+    margin-left:100px;
+  }
+
+  #iconCommenti{
+    background: #5e6970;
+    float:left;
+  }
+
+  #iconSavei{
+    background: #5e6970;
+    float:left;
+  }
+
+  #iconSharei{
+    background: #053251;
+    float:left;
+  }
+
+
+
+  div.entryFooter i{
+    margin: 2px;
+  }
+
+  span.blogAuthor{
+    color: #3d87c5;
+    font-size: 11px;
+  }
+
+  span.blogDate {
+    color: #bfcbd4;
+    font-size: 10px;
+    padding-left: 3px;
+  }
+
 
   ul{
     -webkit-margin-before: 0em;
@@ -106,5 +224,9 @@
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
   }
+
+
+
+
 
 </style>
