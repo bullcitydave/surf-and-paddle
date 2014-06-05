@@ -1,4 +1,11 @@
 
+  body {
+    width:100%;
+    font-family: 'Asap', Tahoma, sans-serif;
+    margin:auto;
+    background:#fafcfe;
+  }
+
   header {
     background:#0D73b6;
     height:382px;
@@ -58,27 +65,19 @@
     margin: 1em 5px 1em 5px;
   }
 
-  #wrapper{
-    width:100%;
-    font-family: 'Asap', Tahoma, sans-serif;
+  .container {
+    width: 965px;
     margin:auto;
+    overflow:hidden;
   }
 
-  #blogTitles{
+  section#titles{
     text-align:center;
     clear:both;
     position:absolute;
     margin-top:154px;
     width:100%;
   }
-
-
-
-  div.main{
-    background:#fafcfe;
-  }
-
-
 
   nav#headerNav{
     margin:0 auto;
@@ -158,7 +157,7 @@
 
   img.popPostImage{
     float:left;
-    width:185px;
+    width: 25%;
     height:200px;
   }
 
@@ -171,27 +170,32 @@
     text-align:center;
   }
 
-  div.blogEntry{
+  article{
     width: 475px;
     margin-left: 100px;
     float:left;
   }
 
-  div.sidebar{
+  section.sidebar{
     float:right;
     width: 300px;
     padding-top: 45px;
   }
 
-  div.entryContent{
+  section.articleContent{
     color: #626769;
     font-size:12px;
     line-height:18px;
   }
 
-  div.popularPosts{
+  section#popularPosts{
     clear: both;
-    margin-left: 100px;
+
+    text-align: center;
+  }
+
+  section#popularPosts h2{
+    text-align: center;
   }
 
 
@@ -211,9 +215,22 @@
 
 
   i.fa{
-    float:left;
-    line-height:1.2;
-    padding-left: 2px;
+    float: left;
+    line-height: 1.5;
+    padding: 4px 5px 4px 5px;
+    background: #5e6970;
+  }
+
+  #searchIcon i.fa{
+    float: left;
+    line-height: 1.2;
+    padding: 0px 0px 0px 2px;
+    background:none;
+  }
+
+
+  li#sharePost i.fa{
+    background:#053251;
   }
 
   div.footer{
@@ -222,27 +239,27 @@
     margin-left:100px;
   }
 
-  #iconComment{
-    background: #5e6970;
+  li.articleAction{
+    list-style: none;
     float:left;
+    background: #9dadb3;
+    color: #fafcfe;
+    font-size: 11px;
+    text-align: center;
+    margin:4px;
   }
 
-  #iconSave{
-    background: #5e6970;
-    float:left;
+  li#sharePost {
+    background:#21659d;
   }
 
-  #iconShare{
-    background: #053251;
-    float:left;
+  nav.articleButtons {
+    margin-top:15px;
   }
 
-  #txtComment, #txtSave, #txtShare{
-    padding-top:8px;
-  }
-
-  div.entryFooter i{
-    margin: 2px;
+  span.articleActionTxt {
+    padding:0px 9px 0px 9px;
+    line-height:2.0;
   }
 
   span.blogAuthor{
