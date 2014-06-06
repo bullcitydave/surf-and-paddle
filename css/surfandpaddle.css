@@ -165,26 +165,31 @@
     height: 40px;
   }
 
-  figure.popPost{
+  div.popPostWrapper{
     width:25%;
+    height:300px;
+    float:left;
+    position:relative;
+  }
+
+  figure.popPost{
+    width:100%;
     float: left;
     height: 300px;
-  }
-
-  a figure.popPost{
     opacity: 0.5;
-    color: #083452;
   }
 
-  a:hover figure.popPost{
-    opacity: 0.8;
-    color: #fff;
-  }
+  /*figure.popPost:hover{
+    opacity: 0.9;
+  }*/
+
+  div.popPostWrapper:hover > .popPost {opacity:0.8;}
+  div.popPostWrapper:hover > .popPostTitle {color:white;}
+
 
   figure.popPost#pop1{
     background: url("http://i.imgur.com/GxpP2or.png") no-repeat center center;
     background-size: cover;
-
 }
 
   figure.popPost#pop2{
@@ -244,10 +249,10 @@
     float: left;
 }
 
-  img.popPostImage{
+  /*img.popPostImage{
     float:left;
     height: 250px;
-  }
+  }*/
 
   figcaption.popPostTitle{
     font-family: 'Oswald';
@@ -255,8 +260,10 @@
     font-weight: normal;
     font-size: 22px;
     text-align: left;
+    position:absolute;
     margin: 250px 18px 18px 18px;
-  }
+    color: #173b5a;
+}
 
   img.authorAvatar{
     content:url("../images/annie-dolphin.gif");
@@ -282,7 +289,7 @@
   section.articleContent{
     color: #626769;
     font-size:12px;
-    line-height:20px;
+    line-height:18px;
   }
 
   section#popularPosts{
