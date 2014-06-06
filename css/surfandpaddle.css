@@ -14,11 +14,9 @@
   }
 
   footer {
-    /* background:#152a3e; */
     max-height: 150px;
     margin: 0 auto;
     width: 100%;
-    height: 150px;
     clear: both;
 }
 
@@ -82,6 +80,11 @@
     overflow:hidden;
   }
 
+  .fullfill {
+    width: 100%;
+    background:#15293e
+  }
+
   section#titles{
     text-align:center;
     clear:both;
@@ -97,13 +100,9 @@
   }
 
   nav#footerNav{
-    background:#152a3e;
-    max-height: 150px;
-    /* margin:auto; */
-    width:100%;
-    height: 150px;
-    /* position: static; */
-    float: left;
+    background: #152a3e;
+    max-height: 100px;
+    height: 100px;
 }
 
   nav#headerNav li{
@@ -119,19 +118,31 @@
 
   nav#footerNav li {
     font-family: 'Asap', Tahoma, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     /* margin-top:5px; */
-    color:#fff;
     float: left;
-}
+    color: #bfcbd4;
+    margin-top: 25px;
+  }
 
   nav#footerNav li#tiycompanyText {
-    font-size:11px;
-    color:#fafcfe;
+    float: left;
+  }
+
+  nav#footerNav li#tiyLogo {
+    float: left;
+    margin-top:0;
   }
 
   nav#footerNav li.navFooterMenu {
-    float: left;
+    float: right;
+    padding: 0 9px 0 9px;
+    border-left: dimgray solid 1px;
+    display: inline-block;
+}
+
+  nav#footerNav li.navFooterMenu:last-child {
+    border:none;
   }
 
   nav#headerNav li.navMenu {
@@ -176,12 +187,8 @@
     width:100%;
     float: left;
     height: 300px;
-    opacity: 0.5;
+    opacity: 0.75;
   }
-
-  /*figure.popPost:hover{
-    opacity: 0.9;
-  }*/
 
   div.popPostWrapper:hover > .popPost {opacity:0.8;}
   div.popPostWrapper:hover > .popPostTitle {color:white;}
@@ -208,9 +215,6 @@
   }
 
   ul.authorSocialList {
-    /* text-align:center; */
-
-    /* position: absolute; */
     padding-top: 4px;
     display: inline-block;
     text-align: center;
@@ -238,7 +242,9 @@
     width:45px;
     float: left;
     margin: 10px;
-}
+  }
+
+
 
   img.authorIcon{
     content:url("../images/annie-dolphin.gif");
@@ -262,7 +268,8 @@
     text-align: left;
     position:absolute;
     margin: 250px 18px 18px 18px;
-    color: #173b5a;
+  /*not using #82b2da* so text displays clearly */
+    color: #1068A4;
 }
 
   img.authorAvatar{
@@ -444,6 +451,5 @@
     color: #bfcbd4;
     font-size:12px;
     line-height:18px;
-
     padding-top: 10px;
 }
