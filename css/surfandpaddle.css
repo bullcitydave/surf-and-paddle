@@ -11,9 +11,9 @@
     background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
     background-size: cover;
   }
-  @media screen and (min-width: 320px) {
+  @media screen and (max-width: 520px) {
     header {
-      height:100px;
+      height:140px;
     }
   }
 
@@ -35,6 +35,11 @@
     line-height:81px;
     color: #fafcfe;
     letter-spacing: -0.5px;
+  }
+  @media screen and (max-width: 520px)                    {
+    h1 {
+      font-size:31px;
+    }
   }
 
   h2 {
@@ -65,7 +70,15 @@
     color: #3d87c5;
     display: block;
     margin-top: -5px;
-}
+  }
+  @media screen and (max-width: 520px) {
+    small {
+      height:140px;
+      color: #053251;
+      font-weight: bold;
+      margin-top: -25px;
+    }
+  }
 
   blockquote {
     color: #3d87c5;
@@ -83,6 +96,12 @@
     margin: auto;
     overflow:hidden;
   }
+  @media screen and (max-width: 520px){
+    container {
+      width: 320px;
+      margin:0;
+    }
+  }
 
   .fullfill {
     width: 100%;
@@ -96,11 +115,22 @@
     margin-top:154px;
     width:100%;
   }
+  @media screen and (max-width: 520px) {
+    section#titles {
+      margin-top:54px;
+      width:100%;
+    }
+  }
 
   nav#headerNav{
     margin: auto;
     width:765px;
     clear:both;
+  }
+  @media screen and (max-width: 520px){
+    nav@headerNav{
+      width: 100%;
+    }
   }
 
   nav#footerNav{
@@ -257,12 +287,17 @@
     margin-top: 8px;
     margin-right: 5px;
     float: left;
-}
+  }
+  @media screen and (max-width:560px){
+    img.authorIcon{
+      content:none;
+      height:0px;
+      width:0px;
+      margin:0;
+      visibility:hidden;
+    }
+  }
 
-  /*img.popPostImage{
-    float:left;
-    height: 250px;
-  }*/
 
   figcaption.popPostTitle{
     font-family: 'Oswald';
@@ -289,6 +324,12 @@
     width: 475px;
     margin-left: 100px;
     float:left;
+  }
+  @media screen and (max-width: 520px) {
+    article {
+      width: 320px;
+      margin: 0 15px 0 15px;
+    }
   }
 
   section.sidebar{
@@ -377,10 +418,18 @@
   span.blogAuthor{
     color: #3d87c5;
     font-size: 11px;
-
     float: left;
     padding-top: 15px;
-}
+  }
+  @media screen and (max-width:520px){
+    span.blogAuthor{
+      visibility: hidden;
+        width:0px;
+        padding:0;
+        visibility:hidden;
+      }
+    }
+
 
   p.authorName{
     color: #3d87c5;
@@ -392,10 +441,16 @@
     color: #bfcbd4;
     font-size: 10px;
     padding-left: 3px;
-
     float: left;
     padding-top: 16px;
-}
+  }
+
+  @media screen and (max-width:560px){
+    time {
+    font-size: 12px;
+    text-decoration: underline;
+    }
+  }
 
 
   ul{
