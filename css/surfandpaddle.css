@@ -36,6 +36,7 @@
     color: #fafcfe;
     letter-spacing: -0.5px;
   }
+
   @media screen and (max-width: 320px)                    {
     h1 {
       font-size:31px;
@@ -147,8 +148,7 @@
 
   nav#footerNav{
     background: #152a3e;
-    max-height: 100px;
-    height: 100px;
+    clear:both;
 }
 
   nav#headerNav li{
@@ -233,7 +233,7 @@
     width:100%;
     float: left;
     height: 300px;
-    opacity: 0.75;
+    opacity: 0.5;
   }
 
   div.popPostWrapper:hover > .popPost {opacity:0.8;}
@@ -275,29 +275,20 @@
   }
 
   img#logo{
-    content:url("../images/surfandpaddle_logo.PNG");
     height:45px;
     width:45px;
     margin-top: -15px;
     margin-right: 5px;
   }
 
-  img#logo:before{
-    content:url("../images/surfandpaddle_logo.PNG");
-  }
-
   img#tiylogo{
-    content:url("http://i.imgur.com/ZmyY4jk.png");
     height:45px;
     width:45px;
     float: left;
     margin: 10px;
   }
 
-
-
   img.authorIcon{
-    content:url("../images/annie-dolphin.gif");
     height:30px;
     width:30px;
     margin-top: 8px;
@@ -306,14 +297,12 @@
   }
   @media screen and (max-width:560px){
     img.authorIcon{
-      content:none;
       height:0px;
       width:0px;
       margin:0;
       visibility:hidden;
     }
   }
-
 
   figcaption.popPostTitle{
     font-family: 'Oswald';
@@ -328,12 +317,10 @@
 }
 
   img.authorAvatar{
-    content:url("../images/annie-dolphin.gif");
     height:60px;
     width:60px;
     margin-top: 8px;
     margin-right: 5px;
-    /* text-align:center; */
   }
 
   article{
@@ -497,9 +484,7 @@
     height:156px;
     width: 200px;
     text-align:center;
-
-    content: url("http://i.imgur.com/YukbnEJ.png");
-}
+  }
 
   p.ad_caption {
     color: #bfcbd4;
