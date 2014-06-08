@@ -110,8 +110,8 @@
   }
   @media screen and (max-width: 320px){
     .container {
-      width: 280px;
       padding:0 20px 0 20px;
+      width:320px;
     }
   }
 
@@ -140,8 +140,8 @@
     clear:both;
   }
   @media screen and (max-width: 320px){
-    nav@headerNav{
-      width: 100%;
+    nav#headerNav{
+      width: 320px;
     }
   }
 
@@ -157,10 +157,52 @@
     font-size: 14px;
     font-weight: 400;
     float:left;
-    padding: 18px 4px 0px 0px;
+    padding: 20px 4px 0px 0px;
     color:#053251;
+  }
+  @media screen and (max-width:320px){
+    nav#headerNav li{
+    float:none;
+    padding:0px;
+    }
+  }
 
-}
+  nav#headerNav li.navMenu {
+    margin: -6px 0 0 8px;
+    float:right;
+  }
+  @media screen and (max-width:320px){
+    nav#headerNav li.navMenu{
+      float: left;
+      margin: 10px 8px 0 8px;
+    }
+  }
+
+  nav#headerNav li#searchIcon {
+    font-size: 12px;
+    float:right;
+    margin-top: -8px;
+    color:#053251;
+  }
+  @media screen and (max-width:320px){
+    nav#headerNav li.searchIcon{
+      float:none;
+      margin:0;
+    }
+  }
+
+
+  nav#headerNav li#companyText{
+    font-size: 14px;
+    font-family: 'Asap', Arial, sans-serif;
+    padding-top: 16px;
+  }
+  @media screen and (max-width:320px){
+    nav#headerNav li#companyText{
+      display: none;
+    }
+  }
+
 
   nav#footerNav li {
     font-family: 'Asap', Tahoma, Arial, sans-serif;
@@ -174,10 +216,20 @@
   nav#footerNav li#tiycompanyText {
     float: left;
   }
+  @media screen and (max-width:320px){
+    nav#footerNav li#tiycompanyText{
+      float:right;
+    }
+  }
 
-  nav#footerNav li#tiyLogo {
+  nav#footerNav li#tiyLogoImg {
     float: left;
     margin-top:0;
+  }
+  @media screen and (max-width:320px){
+    nav#headerNav li#tiyLogoImg{
+      float:none;
+    }
   }
 
   nav#footerNav li.navFooterMenu {
@@ -185,40 +237,22 @@
     padding: 0 9px 0 9px;
     border-left: dimgray solid 1px;
     display: inline-block;
-}
+  }
+  @media screen and (max-width:320px){
+    nav#footerNav li#navFooterMenu {
+      float:left;
+    }
+  }
 
   nav#footerNav li.navFooterMenu:last-child {
     border:none;
   }
-
-  nav#headerNav li.navMenu {
-    margin: -6px 0px 0px 8px;
-    float:right;
+  @media screen and (max-width:320px){
+    nav#footerNav li#navFooterMenu:last-child {
+    border-left: dimgray solid 1px;
+    }
   }
 
-  nav#headerNav li#searchIcon {
-    font-family: 'PT Sans', Tahoma, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    float:right;
-    margin-top: -8px;
-    color:#053251;
-  }
-
-  nav#headerNav li{
-    list-style: none;
-    font-size: 14px;
-    font-weight: 400;
-    float:left;
-    padding: 20px 4px 0px 0px;
-    color:#053251;
-  }
-
-  nav#headerNav li#companyText{
-    font-size: 14px;
-    font-family: 'Asap', Arial, sans-serif;
-    padding-top: 16px;
-  }
 
   div.author{
     text-align:center;
@@ -233,6 +267,13 @@
     height:300px;
     float:left;
     position:relative;
+  }
+  @media screen and (max-width:320px){
+    div.popPostWrapper{
+      float:none;
+      width:280px;
+      margin:15px 20px 0 20px;
+    }
   }
 
   figure.popPost{
@@ -285,15 +326,15 @@
     width: 35px;
     margin:-15px 5px 0 0;
   }
-
   @media screen and (max-width:320px){
     img#logo{
-      margin: 15px 0 0 0;
       padding: 0 142.5px 0 142.5px;
+      position:absolute;
+      margin: 39px 0 0 0;
     }
   }
 
-  img#tiylogo{
+  img#tiyLogo{
     height:45px;
     width:45px;
     float: left;
@@ -307,12 +348,13 @@
     margin-right: 5px;
     float: left;
   }
-  @media screen and (max-width:560px){
+  @media screen and (max-width:320px){
     img.authorIcon{
-      height:0px;
+      /*height:0px;
       width:0px;
       margin:0;
-      visibility:hidden;
+      visibility:hidden;*/
+      display:none;
     }
   }
 
@@ -351,6 +393,13 @@
     float:right;
     width: 300px;
     padding-top: 45px;
+  }
+  @media screen and (max-width: 320px){
+    section.sidebar{
+    float:none;
+    clear:both;
+    padding-top: 45px;
+    }
   }
 
   section.articleContent{
@@ -459,7 +508,7 @@
     float: left;
     padding-top: 16px;
   }
-  @media screen and (max-width:560px){
+  @media screen and (max-width:320px){
     time {
     font-size: 12px;
     text-decoration: underline;
@@ -470,8 +519,7 @@
   }
   @media screen and (max-width:560px){
     .timeExtraText {
-      visibility: hidden;
-      text-indent: -9999px;
+      display:none;
     }
   }
 
