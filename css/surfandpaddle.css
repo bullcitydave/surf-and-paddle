@@ -39,7 +39,7 @@
 
   @media screen and (max-width: 320px)                    {
     h1 {
-      font-size:31px;
+      font-size:28px;
     }
   }
 
@@ -79,7 +79,6 @@
   }
   @media screen and (max-width: 320px) {
     small {
-      color: #053251;
       font-weight: bold;
       margin-top: -25px;
     }
@@ -153,14 +152,15 @@
 
   nav#headerNav li{
     list-style: none;
-    font-family: 'Oswald';
+    font-family: 'Oswald', Arial, sans;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
     float:left;
     padding: 18px 4px 0px 0px;
     color:#053251;
-  }
+
+}
 
   nav#footerNav li {
     font-family: 'Asap', Tahoma, Arial, sans-serif;
@@ -192,7 +192,7 @@
   }
 
   nav#headerNav li.navMenu {
-    margin:3px 0px 0px 8px;
+    margin: -6px 0px 0px 8px;
     float:right;
   }
 
@@ -201,7 +201,7 @@
     text-transform: uppercase;
     font-size: 12px;
     float:right;
-    margin-top:2px;
+    margin-top: -8px;
     color:#053251;
   }
 
@@ -210,8 +210,14 @@
     font-size: 14px;
     font-weight: 400;
     float:left;
-    padding: 18px 4px 0px 0px;
+    padding: 20px 4px 0px 0px;
     color:#053251;
+  }
+
+  nav#headerNav li#companyText{
+    font-size: 14px;
+    font-family: 'Asap', Arial, sans-serif;
+    padding-top: 16px;
   }
 
   div.author{
@@ -275,10 +281,16 @@
   }
 
   img#logo{
-    height:45px;
-    width:45px;
-    margin-top: -15px;
-    margin-right: 5px;
+    height: 35px;
+    width: 35px;
+    margin:-15px 5px 0 0;
+  }
+
+  @media screen and (max-width:320px){
+    img#logo{
+      margin: 15px 0 0 0;
+      padding: 0 142.5px 0 142.5px;
+    }
   }
 
   img#tiylogo{
