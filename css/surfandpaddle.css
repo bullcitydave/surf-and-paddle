@@ -2,7 +2,7 @@
     width:100%;
     font-family: 'Asap', Tahoma, sans-serif;
     margin:auto;
-    background:#fafcfe;
+    background:#ffffff;
   }
 
   header {
@@ -11,7 +11,7 @@
     background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
     background-size: cover;
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 320px) {
     header {
       height:140px;
     }
@@ -36,7 +36,7 @@
     color: #fafcfe;
     letter-spacing: -0.5px;
   }
-  @media screen and (max-width: 520px)                    {
+  @media screen and (max-width: 320px)                    {
     h1 {
       font-size:31px;
     }
@@ -53,6 +53,11 @@
     line-height: 52px;
     padding-top: 45px;
     color: #053251;
+  }
+  @media screen and (max-width: 320px) {
+    h2 {
+      padding-top: 35px;
+    }
   }
 
   h3 {
@@ -71,9 +76,8 @@
     display: block;
     margin-top: -5px;
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 320px) {
     small {
-      height:140px;
       color: #053251;
       font-weight: bold;
       margin-top: -25px;
@@ -90,16 +94,24 @@
     -webkit-margin-end: 5px;
     margin: 1em 5px 1em 5px;
   }
+  @media screen and (max-width: 320px){
+    blockquote {
+      font-size:16px;
+      line-height:20px;
+      font-family:"PT Sans", Arial, sans-serif;
+      font-weight:bold;
+       }
+     }
 
   .container {
     width: 965px;
     margin: auto;
     overflow:hidden;
   }
-  @media screen and (max-width: 520px){
-    container {
-      width: 320px;
-      margin:0;
+  @media screen and (max-width: 320px){
+    .container {
+      width: 280px;
+      padding:0 20px 0 20px;
     }
   }
 
@@ -115,7 +127,7 @@
     margin-top:154px;
     width:100%;
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 320px) {
     section#titles {
       margin-top:54px;
       width:100%;
@@ -127,7 +139,7 @@
     width:765px;
     clear:both;
   }
-  @media screen and (max-width: 520px){
+  @media screen and (max-width: 320px){
     nav@headerNav{
       width: 100%;
     }
@@ -270,6 +282,10 @@
     margin-right: 5px;
   }
 
+  img#logo:before{
+    content:url("../images/surfandpaddle_logo.PNG");
+  }
+
   img#tiylogo{
     content:url("http://i.imgur.com/ZmyY4jk.png");
     height:45px;
@@ -325,10 +341,10 @@
     margin-left: 100px;
     float:left;
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 320px) {
     article {
-      width: 320px;
-      margin: 0 15px 0 15px;
+      width: 280px;
+      margin: 0;
     }
   }
 
@@ -437,21 +453,28 @@
     text-transform:uppercase;
   }
 
-  time {
+  time, span.timeExtraText {
     color: #bfcbd4;
     font-size: 10px;
     padding-left: 3px;
     float: left;
     padding-top: 16px;
   }
-
   @media screen and (max-width:560px){
     time {
     font-size: 12px;
     text-decoration: underline;
+    padding-left: 0;
+    padding-top: 8px;
+    font-weight: bold;
     }
   }
-
+  @media screen and (max-width:560px){
+    .timeExtraText {
+      visibility: hidden;
+      text-indent: -9999px;
+    }
+  }
 
   ul{
     /* -webkit-margin-before: 0em; */
