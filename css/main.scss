@@ -4,117 +4,131 @@
 @import "http://fonts.googleapis.com/css?family=PT+Sans";
 @import "http://fonts.googleapis.com/css?family=Asap:400,700,400italic";
 
-  body {
-    width:100%;
-    font-family: 'Asap', Tahoma, sans-serif;
-    margin:auto;
-    background:#ffffff;
-  }
+//////// Variables
+// Fonts
+  $sansSerif1: 'Asap', Tahoma, sans-serif;
+  $sansSerif2: 'PT Sans', Arial, sans-serif;
+  $sansSerif3: 'Oswald', Aril, sans-serif;
+// Font Sizing
+  $h1Size: 81px;
+  $h1Size-m1: 28px;
+  $h1LineHeight: 81px;
+  $h1LetterSpacing: -0.5px;
+  $h2Size: 46px;
+  $h2LineHeight: 48px;
+  $h3Size: 14px;
+  $smallSize: 11px;
+  $quoteSize: 22px;
+// Colors
+  $white: #ffffff;
+  $offWhite: #fafcfe;
+  $veryDarkBlue: #053251;
+  $midBlue: #3d87c5;
+// Dimensions
+  $headerHeight: 382px;
+  $headerHeight-media1: 140px;
+  $media1MaxWidth: 320px;
+  $footerHeight: 150px;
+// Offsets
+  $h2Padding: 25px 0 0 0;
+  $h2Padding-m1: 45px 0 0 0;
+  $quotePadding: 12px 15px 0 0;
+  $quoteMargin: 1em 5px 1em 5px;
+  $smallMargin:-25px 0 0 0;
 
-  header {
-    background:#0D73b6;
-    height:382px;
-    background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
-    background-size: cover;
-  }
-  @media screen and (max-width: 320px) {
-    header {
-      height:140px;
-    }
-  }
 
-  footer {
-    max-height: 150px;
-    margin: 0 auto;
-    width: 100%;
-    clear: both;
-  }
+  ////////
 
-  h1 {
-    font-family: 'PT Sans', Arial, sans-serif;
-    text-transform:uppercase;
-    font-weight:lighter;
-    font-size:81px;
-    text-align:center;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    line-height:81px;
-    color: #fafcfe;
-    letter-spacing: -0.5px;
-  }
+body {
+  width:100%;
+  font-family: $sansSerif1;
+  margin:auto;
+  background: $white;
+}
 
-  @media screen and (max-width: 320px)                          {
-    h1 {
-      font-size:28px;
-    }
+header {
+  height:382px;
+  background:url(../images/tulum-waves.jpg) no-repeat center center fixed;
+  background-size: cover;
+  @media screen and (max-width: $media1MaxWidth) {
+    height:$headerHeight-media1
   }
+}
+
+h1 {
+  font-family: $sansSerif2;
+  text-transform:uppercase;
+  font-weight:lighter;
+  font-size: $h1Size;
+  text-align:center;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  color: $offWhite;
+  letter-spacing: $h1LetterSpacing;
+  @media screen and (max-width: $media1MaxWidth)                                {
+    font-size:$h1Size-m1;
+  }
+}
 
   h2 {
-    font-family: 'Oswald';
+    font-family: $sansSerif3;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 46px;
+    font-size: $h2Size;
     text-align:left;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    line-height: 52px;
-    padding-top: 45px;
-    color: #053251;
-  }
-  @media screen and (max-width: 320px) {
-    h2 {
-      padding-top: 35px;
+    line-height: $h2LineHeight;
+    padding: $h2Padding;
+    color: $veryDarkBlue;
+    @media screen and (max-width: $media1MaxWidth) {
+      padding: $h2Padding-m1;
     }
   }
 
   h3 {
     text-transform:uppercase;
-    color:#3d87c5;
-    font-family: 'Oswald', 'Arial', sans-serif;
-    font-size: 14px;
+    color: $midBlue;
+    font-family: $sansSerif2;
+    font-size: $h3Size;
   }
 
   small  {
-    font-size: 11px;
+    font-size: $smallSize;
     text-align:center;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    color: #3d87c5;
+    color: $midBlue;
     display: block;
-    margin-top: -5px;
-  }
-  @media screen and (max-width: 320px) {
-    small {
+    margin-top: $smallMargin;
+    @media screen and (max-width: $media1MaxWidth)   {
       font-weight: bold;
-      margin-top: -25px;
     }
   }
 
   blockquote {
-    color: #3d87c5;
-    font-size: 22px;
+    color: $midBlue;
+    font-size: $quoteSize;
     text-transform:uppercase;
-    border-left:solid 2px #bfcbd4;
+    border-left: solid 2px #bfcbd4;
     padding: 12px;
     -webkit-margin-start: 5px;
     -webkit-margin-end: 5px;
     margin: 1em 5px 1em 5px;
-  }
-  @media screen and (max-width: 320px){
-    blockquote {
+    @media screen and (max-width: $media1MaxWidth){
       font-size:16px;
       line-height:20px;
-      font-family:"PT Sans", Arial, sans-serif;
+      font-family:$sansSerif2;
       font-weight:bold;
-       }
-     }
+    }
+  }
 
   .container {
     width: 965px;
     margin: auto;
     overflow:hidden;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: $media1MaxWidth){
     .container {
       width:320px;
     }
@@ -132,7 +146,7 @@
     margin-top:154px;
     width:100%;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: $media1MaxWidth) {
     section#titles {
       margin-top:54px;
       width:100%;
@@ -144,7 +158,7 @@
     width:765px;
     clear:both;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#headerNav{
       width: 320px;
     }
@@ -160,7 +174,7 @@
     padding: 20px 4px 0px 0px;
     color:#053251;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#headerNav li{
     float:none;
     padding:0px;
@@ -171,7 +185,7 @@
     margin: -6px 0 0 8px;
     float:right;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#headerNav li.navMenu{
       float: left;
       margin: 10px 8px 0 8px;
@@ -184,7 +198,7 @@
     margin-top: -8px;
     color:#053251;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#headerNav li.searchIcon{
       float:none;
       margin:0;
@@ -197,7 +211,7 @@
     font-family: 'Asap', Arial, sans-serif;
     padding-top: 16px;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#headerNav li#companyText{
       display: none;
     }
@@ -217,7 +231,7 @@
     color: #bfcbd4;
     margin-top: 25px;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#footerNav li{
       float:none;
       font-size:14px;
@@ -229,17 +243,24 @@
   nav#footerNav li#tiycompanyText {
     float: left;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#footerNav li#tiycompanyText{
 
     }
   }
 
+footer {
+  max-height: $footerHeight;
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+}
+
   nav#footerNav li#tiyLogoImg {
     float: left;
     margin-top:0;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#footerNav li#tiyLogoImg{
     length:65px;
     width:65px;
@@ -252,7 +273,7 @@
     border-left: dimgray solid 1px;
     display: inline-block;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#footerNav li#navFooterMenu {
       float:left;
       color:#a2b2bd;
@@ -262,7 +283,7 @@
   nav#footerNav li.navFooterMenu:last-child {
     border:none;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     nav#footerNav li#navFooterMenu:last-child {
     border-left: dimgray solid 1px;
     }
@@ -283,7 +304,7 @@
     float:left;
     position:relative;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     div.popPostWrapper{
       float:none;
       width:280px;
@@ -293,7 +314,7 @@
 
 
 
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     section#popularPosts a:last-child {
       display:none;
       }
@@ -305,7 +326,7 @@
     height: 300px;
     opacity: 0.5;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     height: 205px;
     float:none;
   }
@@ -353,7 +374,7 @@
     width: 35px;
     margin:-15px 5px 0 0;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     img#logo{
       padding: 0 142.5px 0 142.5px;
       position:absolute;
@@ -367,7 +388,7 @@
     float: left;
     margin: 10px;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     img#tiyLogo{
       height: 60px;
       width: 60px;
@@ -381,7 +402,7 @@
     margin-right: 5px;
     float: left;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     img.authorIcon{
       /*height:0px;
       width:0px;
@@ -415,7 +436,7 @@
     margin-left: 100px;
     float:left;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: $media1MaxWidth) {
     article {
       width: 280px;
       margin: 0;
@@ -427,7 +448,7 @@
     width: 300px;
     padding-top: 45px;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: $media1MaxWidth){
     section.sidebar{
     float:none;
     clear:both;
@@ -447,7 +468,7 @@
     width: 100%;
     float: left;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: $media1MaxWidth){
     section#popularPosts{
     border-top:solid 1px #e7ecf0;
     background:#ffffff;
@@ -458,7 +479,7 @@
     text-align: center;
     background:#fafcfe;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: $media1MaxWidth) {
     section#popularPosts h2 {
       font-size:32px;
       background:#ffffff;
@@ -553,7 +574,7 @@
     float: left;
     padding-top: 16px;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     time {
     font-size: 12px;
     text-decoration: underline;
@@ -616,7 +637,7 @@
     margin: 30px 50px 30px 50px;
     width: 200px;
   }
-  @media screen and (max-width:320px){
+  @media screen and (max-width: $media1MaxWidth){
     aside{
       display:none;
     }
@@ -634,7 +655,7 @@
 nav#footerNav li#tiycompanyText {
   float: left;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   nav#footerNav li#tiycompanyText{
 
   }
@@ -644,7 +665,7 @@ nav#footerNav li#tiyLogoImg {
   float: left;
   margin-top:0;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   nav#footerNav li#tiyLogoImg{
   length:65px;
   width:65px;
@@ -657,7 +678,7 @@ nav#footerNav li.navFooterMenu {
   border-left: dimgray solid 1px;
   display: inline-block;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   nav#footerNav li#navFooterMenu {
     float:left;
     color:#a2b2bd;
@@ -667,7 +688,7 @@ nav#footerNav li.navFooterMenu {
 nav#footerNav li.navFooterMenu:last-child {
   border:none;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   nav#footerNav li#navFooterMenu:last-child {
   border-left: dimgray solid 1px;
   }
@@ -688,7 +709,7 @@ div.popPostWrapper{
   float:left;
   position:relative;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   div.popPostWrapper{
     float:none;
     width:280px;
@@ -698,7 +719,7 @@ div.popPostWrapper{
 
 
 
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   section#popularPosts a:last-child {
     display:none;
     }
@@ -710,7 +731,7 @@ figure.popPost{
   height: 300px;
   opacity: 0.5;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   height: 205px;
   float:none;
 }
@@ -758,7 +779,7 @@ img#logo{
   width: 35px;
   margin:-15px 5px 0 0;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   img#logo{
     padding: 0 142.5px 0 142.5px;
     position:absolute;
@@ -772,7 +793,7 @@ nav#footerNav li#tiyLogo{
   float: left;
   margin: 10px;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   nav#footerNav li#tiyLogo{
     height: 60px;
     width: 60px;
@@ -786,7 +807,7 @@ img.authorIcon{
   margin-right: 5px;
   float: left;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   img.authorIcon{
     /*height:0px;
     width:0px;
@@ -820,7 +841,7 @@ article{
   margin-left: 100px;
   float:left;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: $media1MaxWidth) {
   article {
     width: 280px;
     margin: 0;
@@ -832,7 +853,7 @@ section.sidebar{
   width: 300px;
   padding-top: 45px;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: $media1MaxWidth){
   section.sidebar{
   float:none;
   clear:both;
@@ -852,7 +873,7 @@ section#popularPosts{
   width: 100%;
   float: left;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: $media1MaxWidth){
   section#popularPosts{
   border-top:solid 1px #e7ecf0;
   background:#ffffff;
@@ -863,7 +884,7 @@ section#popularPosts h2{
   text-align: center;
   background:#fafcfe;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: $media1MaxWidth) {
   section#popularPosts h2 {
     font-size:32px;
     background:#ffffff;
@@ -958,7 +979,7 @@ time, span.timeExtraText {
   float: left;
   padding-top: 16px;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   time {
   font-size: 12px;
   text-decoration: underline;
@@ -1021,7 +1042,7 @@ aside {
   margin: 30px 50px 30px 50px;
   width: 200px;
 }
-@media screen and (max-width:320px){
+@media screen and (max-width: $media1MaxWidth){
   aside{
     display:none;
   }
