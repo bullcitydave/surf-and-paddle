@@ -173,49 +173,82 @@ nav#headerNav{
     float:left;
     padding: 20px 4px 0px 0px;
     color:#053251;
-    // @media screen and (max-width: $media1MaxWidth){
-    //   float:none;
-    //   padding:0px;
+    // Why can't I nest any of this and get the style rendered?
+    // #companyText{
+    //   font-family: 'Asap', Arial, sans-serif;
+    //   padding-top: 16px;
+    //   @media screen and (max-width: $media1MaxWidth){
+    //   display: none;
+    //   }
     // }
-    li#companyText{
-      font-size: 14px;
-      font-family: 'Asap', Arial, sans-serif;
-      padding-top: 16px;
-      @media screen and (max-width: $media1MaxWidth){
-      display: none;
-      }
-    }
-    .navMenu {
-      margin: -6px 0 0 8px;
-      float:right;
-      @media screen and (max-width: $media1MaxWidth){
-        float: left;
-        margin: 10px 8px 0 8px;
-      }
-    }
-    // These classes not getting recognized and floating right (searchIcon, navMenu)...none of these li classes or IDs are
-    #searchIcon {
-      font-size: 12px;
-      float:right;
-      margin-top: -8px;
-      color:#053251;
-      i.fa{
-        float: left;
-        line-height: 1.2;
-        padding: 0px 0px 0px 2px;
-        background:none;
-      }
-      @media screen and (max-width: $media1MaxWidth){
-        float:none;
-        margin:0;
-      }
-    }
+    // .navMenu {
+    //   margin: -6px 0 0 8px;
+    //   float:right;
+    //   @media screen and (max-width: $media1MaxWidth){
+    //     float: left;
+    //     margin: 10px 8px 0 8px;
+    //   }
+    // }
+    // #searchIcon {
+    //   font-size: 12px;
+    //   float:right;
+    //   margin-top: -8px;
+    //   color:#053251;
+    //   i.fa{
+    //     float: left;
+    //     line-height: 1.2;
+    //     padding: 0px 0px 0px 2px;
+    //     background:none;
+    //   }
+    //   @media screen and (max-width: $media1MaxWidth){
+    //     float:none;
+    //     margin:0;
+    //   }
+    // }
     #companyLogo{
     }
   }
 }
 
-// Not working if I try to stick this in #companyLogo
+
+// Can't figure out why I can't nest this
+nav#headerNav li.navMenu {
+  margin: -6px 0 0 8px;
+  float:right;
+}
+@media screen and (max-width:320px){
+  nav#headerNav li.navMenu{
+    float: left;
+    margin: 10px 8px 0 8px;
+  }
+}
+
+nav#headerNav li#searchIcon {
+  font-size: 12px;
+  float:right;
+  margin-top: -8px;
+  color:#053251;
+}
+@media screen and (max-width:320px){
+  nav#headerNav li.searchIcon{
+    float:none;
+    margin:0;
+  }
+}
+
+
+nav#headerNav li#companyText{
+  font-size: 14px;
+  font-family: 'Asap', Arial, sans-serif;
+  padding-top: 16px;
+}
+@media screen and (max-width:320px){
+  nav#headerNav li#companyText{
+    display: none;
+  }
+}
+//////////
+
 img#logo{
   height: 35px;
   width: 35px;
