@@ -1,8 +1,9 @@
 @import "reset.scss";
-@import "../font-awesome/css/font-awesome.min.css";
+@import "../font-awesome/css/font-awesome.css";
 @import "http://fonts.googleapis.com/css?family=Oswald:400,300,700";
 @import "http://fonts.googleapis.com/css?family=PT+Sans";
 @import "http://fonts.googleapis.com/css?family=Asap:400,700,400italic";
+@import "bourbon/bourbon";
 
 //////// Variables
 // Fonts
@@ -33,6 +34,7 @@
   $footerHeight: 150px;
   $containerWidth: 965px;
   $containerWidth-m1: 320px;
+  $articleWidth: 425px;
 // Offsets
   $h2Padding: 25px 0 0 0;
   $h2Padding-m1: 45px 0 0 0;
@@ -43,10 +45,51 @@
   $titlesMargin-m1: 54px 0 0 0;
 // Borders
   $quoteBorderLeft: solid 2px #bfcbd4;
+//URLs
+  $companyLogoImage: "../images/surfandpaddle_logo.gif";
+// Text
+  $companyText: "Surf & Paddle Co. Blog";
+// Mixins
 
+@mixin companyText{
+  font-size: 14px;
+  font-family: 'Asap', Arial, sans-serif;
+  padding-top: 12px;
+  float:left;
+  span:before {
+    content:$companyText;
+  }
+  @media screen and (max-width:320px){
+      display: none;
+  }
+}
 
+@mixin companyLogo{
+  float:left;
+  height: 35px;
+  width: 35px;
+  margin:0 5px 0 0;
+  background-image:url($companyLogoImage);
+  background-image: url('../images/surfandpaddle_logo.gif');
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
 
-  ////////
+@mixin navMenu($navMenuLabel){
+  margin: -6px 0 0 8px;
+  float:right;
+  span:before {
+    content:$navMenuLabel;
+  }
+  @media screen and (max-width: $media1MaxWidth){
+    float: left;
+    margin: 10px 8px 0 8px;
+  }
+}
+
+* {
+  @include box-sizing(border-box);
+}
 
 body {
   width:100%;
@@ -135,8 +178,8 @@ blockquote {
   width: $containerWidth;
   margin: auto;
   overflow:hidden;
-  @media screen and (max-width: $media1MaxWidth){
-    width: $containerWidth-m1;
+  @media screen and (max-width: 320px){
+    width: 320px;
   }
 }
 
@@ -170,99 +213,35 @@ nav#headerNav{
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
-    float:left;
     padding: 20px 4px 0px 0px;
     color:#053251;
-    // Why can't I nest any of this and get the style rendered?
-    // #companyText{
-    //   font-family: 'Asap', Arial, sans-serif;
-    //   padding-top: 16px;
-    //   @media screen and (max-width: $media1MaxWidth){
-    //   display: none;
-    //   }
-    // }
-    // .navMenu {
-    //   margin: -6px 0 0 8px;
-    //   float:right;
-    //   @media screen and (max-width: $media1MaxWidth){
-    //     float: left;
-    //     margin: 10px 8px 0 8px;
-    //   }
-    // }
-    // #searchIcon {
-    //   font-size: 12px;
-    //   float:right;
-    //   margin-top: -8px;
-    //   color:#053251;
-    //   i.fa{
-    //     float: left;
-    //     line-height: 1.2;
-    //     padding: 0px 0px 0px 2px;
-    //     background:none;
-    //   }
-    //   @media screen and (max-width: $media1MaxWidth){
-    //     float:none;
-    //     margin:0;
-    //   }
-    // }
-    #companyLogo{
+    float:left;
+    &:nth-child(1) {
+      @include companyLogo();
+    }
+    &:nth-child(2) {
+      @include companyText();
+    }
+    &:nth-child(4) {
+      @include navMenu('Search');
+    }
+    &:nth-child(5) {
+      @include navMenu('About');
     }
   }
 }
 
-
-// Can't figure out why I can't nest this
-nav#headerNav li.navMenu {
-  margin: -6px 0 0 8px;
-  float:right;
-}
-@media screen and (max-width:320px){
-  nav#headerNav li.navMenu{
-    float: left;
-    margin: 10px 8px 0 8px;
-  }
-}
-
+// 3rd child is icon; does not play nicely within the mixin
 nav#headerNav li#searchIcon {
   font-size: 12px;
   float:right;
-  margin-top: -8px;
+  margin-top:-5px;
   color:#053251;
 }
-@media screen and (max-width:320px){
-  nav#headerNav li.searchIcon{
-    float:none;
-    margin:0;
-  }
-}
 
-
-nav#headerNav li#companyText{
-  font-size: 14px;
-  font-family: 'Asap', Arial, sans-serif;
-  padding-top: 16px;
-}
-@media screen and (max-width:320px){
-  nav#headerNav li#companyText{
-    display: none;
-  }
-}
-//////////
-
-img#logo{
-  height: 35px;
-  width: 35px;
-  margin:-15px 5px 0 0;
-  @media screen and (max-width: $media1MaxWidth){
-    img#logo {
-      padding: 0 142.5px 0 142.5px;
-    position:absolute;
-    margin: 39px 0 0 0;
-}}}
 
 article{
-  width: 475px;
-  margin-left: 100px;
+  width: golden-ratio($containerWidth,-1);
   float:left;
   @media screen and (max-width: $media1MaxWidth) {
     width: 280px;
@@ -630,7 +609,8 @@ aside {
 
   section.sidebar{
     float:right;
-    width: 300px;
+    width: golden-ratio($containerWidth,-2)-1;
+    // One pixel off
     padding-top: 45px;
   }
   @media screen and (max-width: $media1MaxWidth){
