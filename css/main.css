@@ -95,7 +95,8 @@ h2 {
   color: #142940; }
   @media screen and (max-width: 320px) {
     h2 {
-      padding: 45px 0 0 0; } }
+      padding: 35px 0 0 0;
+      line-height: 52px; } }
 
 h3 {
   text-transform: uppercase;
@@ -150,7 +151,7 @@ section#titles {
   width: 100%; }
   @media screen and (max-width: 320px) {
     section#titles {
-      margin-top: 54px 0 0 0;
+      margin: 54px 0 0 0;
       width: 100%; } }
 
 nav#headerNav {
@@ -212,7 +213,11 @@ nav#headerNav {
           float: left; } }
 
 section#main {
-  padding: 20px 0 0 0; }
+  padding: 20px 100px 20px 100px; }
+  @media screen and (max-width: 320px) {
+    section#main {
+      padding: 20px;
+      line-height: 52px; } }
   section#main article {
     width: 472.80593px;
     float: left; }
@@ -222,6 +227,9 @@ section#main {
         margin: 0; } }
     section#main article .byline {
       height: 40px; }
+      @media screen and (max-width: 320px) {
+        section#main article .byline {
+          height: 25px; } }
     section#main article img.authorIcon {
       height: 30px;
       width: 30px;
@@ -236,25 +244,32 @@ section#main {
       font-size: 11px;
       float: left;
       padding-top: 15px; }
+      @media screen and (max-width: 320px) {
+        section#main article span.blogAuthor {
+          display: none; } }
     section#main article time, section#main article span.timeExtraText {
-      color: dimgray;
+      color: #bfcbd4;
       font-size: 10px;
       padding-left: 3px;
       float: left;
       padding-top: 16px; }
-      @media screen and (max-width: 320px) {
-        section#main article time time, section#main article span.timeExtraText time {
-          font-size: 12px;
-          text-decoration: underline;
-          padding-left: 0;
-          padding-top: 8px;
-          font-weight: bold; }
-        section#main article time .timeExtraText, section#main article span.timeExtraText .timeExtraText {
-          display: none; } }
+    @media screen and (max-width: 320px) {
+      section#main article time {
+        font-size: 12px;
+        text-decoration: underline;
+        padding-left: 0;
+        margin-top: -15px;
+        font-weight: bold; } }
+    @media screen and (max-width: 320px) {
+      section#main article .timeExtraText {
+        display: none; } }
     section#main article section.articleContent {
       color: #626769;
       font-size: 12px;
       line-height: 18px; }
+      @media screen and (max-width: 320px) {
+        section#main article section.articleContent {
+          clear: both; } }
     section#main article nav.articleButtons {
       margin-top: 15px; }
       section#main article nav.articleButtons li.articleAction {
@@ -279,7 +294,7 @@ section#main {
           line-height: 2.0; }
   section#main section.sidebar {
     float: right;
-    width: 292.21628px;
+    width: 291.21628px;
     padding-top: 45px; }
     @media screen and (max-width: 320px) {
       section#main section.sidebar section.sidebar {
@@ -293,20 +308,34 @@ section#main {
         width: 60px;
         margin-top: 8px;
         margin-right: 5px; }
+        @media screen and (max-width: 320px) {
+          section#main section.sidebar div.author img.authorAvatar {
+            height: 90px;
+            width: 90px; } }
       section#main section.sidebar div.author p.authorName {
         color: #3d87c5;
         font-size: 12px;
         text-transform: uppercase; }
+        @media screen and (max-width: 320px) {
+          section#main section.sidebar div.author p.authorName {
+            font-size: 18px;
+            line-height: 18px; } }
       section#main section.sidebar div.author ul.authorSocialList {
         padding-top: 4px;
         display: inline-block;
         text-align: center; }
+        @media screen and (max-width: 320px) {
+          section#main section.sidebar div.author ul.authorSocialList {
+            padding-top: 0px; } }
         section#main section.sidebar div.author ul.authorSocialList li {
           list-style: none;
           font-size: 10px;
           float: left;
           padding: 0px 7px 0px 7px;
           color: #bfcbd4; }
+          @media screen and (max-width: 320px) {
+            section#main section.sidebar div.author ul.authorSocialList li {
+              font-size: 16px; } }
     section#main section.sidebar div.adblock_square {
       clear: both;
       margin: 30px 100px 40px 0;
@@ -350,18 +379,19 @@ footer {
     clear: both;
     margin: 0 auto;
     width: 100%;
-    float: left; }
+    float: left;
+    border-top: solid 1px #e7ecf0;
+    background: white; }
     @media screen and (max-width: 320px) {
-      footer section#popularPosts {
-        border-top: solid 1px #e7ecf0;
-        background: white; } }
+      footer section#popularPosts:last-child {
+        display: none; } }
     footer section#popularPosts h2 {
       text-align: center;
       background: #fafcfe; }
       @media screen and (max-width: 320px) {
         footer section#popularPosts h2 {
           font-size: 32px;
-          background: #ffffff; } }
+          background: white; } }
     footer section#popularPosts div.popPostWrapper {
       width: 25%;
       height: 300px;
@@ -371,7 +401,12 @@ footer {
         footer section#popularPosts div.popPostWrapper {
           float: none;
           width: 280px;
-          margin: 15px 20px 0 20px; } }
+          margin: 15px 20px 0 20px;
+          height: 205px; } }
+      footer section#popularPosts div.popPostWrapper:hover > .popPost {
+        opacity: 0.8; }
+      footer section#popularPosts div.popPostWrapper:hover > .popPostTitle {
+        color: white; }
       footer section#popularPosts div.popPostWrapper figure.popPost {
         width: 100%;
         float: left;
@@ -382,10 +417,6 @@ footer {
           footer section#popularPosts div.popPostWrapper figure.popPost {
             height: 205px;
             float: none; } }
-        footer section#popularPosts div.popPostWrapper figure.popPost:hover > .popPost {
-          opacity: 0.8; }
-        footer section#popularPosts div.popPostWrapper figure.popPost:hover > .popPostTitle {
-          color: white; }
         footer section#popularPosts div.popPostWrapper figure.popPost#pop1 {
           background: url("http://i.imgur.com/GxpP2or.png") no-repeat center center; }
         footer section#popularPosts div.popPostWrapper figure.popPost#pop2 {
@@ -405,57 +436,56 @@ footer {
         /*not using #82b2da* so text displays clearly */
         color: #1068A4; }
         @media screen and (max-width: 320px) {
-          footer section#popularPosts div.popPostWrapper figcaption.popPostTitle section#popularPosts a:last-child {
-            display: none; } }
-  footer nav#footerNav {
-    background: #142940;
-    clear: both; }
-    footer nav#footerNav li {
-      font-family: 'Asap', Tahoma, Arial, sans-serif;
-      font-size: 11px;
-      float: left;
-      color: #bfcbd4;
-      margin-top: 25px; }
+          footer section#popularPosts div.popPostWrapper figcaption.popPostTitle {
+            margin-top: -50px; } }
+
+nav#footerNav {
+  background: #142940;
+  clear: both; }
+  nav#footerNav li {
+    font-family: 'Asap', Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    float: right;
+    color: #bfcbd4;
+    margin-top: 25px; }
+    @media screen and (max-width: 320px) {
+      nav#footerNav li {
+        float: none;
+        font-size: 14px;
+        color: #a2b2bd;
+        margin: 0 0 0 0; } }
+    nav#footerNav li#tiycompanyText {
+      float: left; }
       @media screen and (max-width: 320px) {
-        footer nav#footerNav li {
-          float: none;
-          font-size: 14px;
-          color: #a2b2bd;
-          margin: 0 0 0 0; } }
-      footer nav#footerNav li#tiyLogo {
-        margin-top: 10px; }
-      footer nav#footerNav li#tiycompanyText {
-        float: left; }
-        @media screen and (max-width: 320px) {
-          footer nav#footerNav li#tiycompanyText {
-            float: none; } }
-      footer nav#footerNav li#tiyLogo {
+        nav#footerNav li#tiycompanyText {
+          float: none; } }
+    nav#footerNav li#tiyLogo {
+      float: left;
+      margin-top: 0; }
+      @media screen and (max-width: 320px) {
+        nav#footerNav li#tiyLogo {
+          length: 65px;
+          width: 65px; } }
+      nav#footerNav li#tiyLogo img#tiyLogoImg {
+        height: 45px;
+        width: 45px;
         float: left;
-        margin-top: 0; }
+        margin: 10px; }
         @media screen and (max-width: 320px) {
-          footer nav#footerNav li#tiyLogo {
-            length: 65px;
-            width: 65px; } }
-        footer nav#footerNav li#tiyLogo img#tiyLogoImg {
-          height: 45px;
-          width: 45px;
+          nav#footerNav li#tiyLogo img#tiyLogoImg {
+            height: 60px;
+            width: 60px; } }
+    nav#footerNav li.navFooterMenu {
+      float: right;
+      padding: 0 9px 0 9px;
+      border-left: dimgray solid 1px;
+      display: inline-block; }
+      @media screen and (max-width: 320px) {
+        nav#footerNav li.navFooterMenu {
           float: left;
-          margin: 10px; }
-          @media screen and (max-width: 320px) {
-            footer nav#footerNav li#tiyLogo img#tiyLogoImg {
-              height: 60px;
-              width: 60px; } }
-      footer nav#footerNav li#navFooterMenu {
-        float: right;
-        padding: 0 9px 0 9px;
-        border-left: dimgray solid 1px;
-        display: inline-block; }
+          color: #a2b2bd; } }
+      nav#footerNav li.navFooterMenu:last-child {
+        border: none; }
         @media screen and (max-width: 320px) {
-          footer nav#footerNav li#navFooterMenu {
-            float: left;
-            color: #a2b2bd; } }
-        footer nav#footerNav li#navFooterMenu:last-child {
-          border: none; }
-          @media screen and (max-width: 320px) {
-            footer nav#footerNav li#navFooterMenu:last-child {
-              border-left: dimgray solid 1px; } }
+          nav#footerNav li.navFooterMenu:last-child {
+            border-left: dimgray solid 1px; } }

@@ -46,7 +46,7 @@
   //
 // Offsets
   $h2Padding: 25px 0 0 0;
-  $h2Padding-m1: 45px 0 0 0;
+  $h2Padding-m1: 35px 0 0 0;
   $quoteMargin: 25px 5px 25px 5px;
   $quotePadding: 10px 25px 10px 10px;
   $smallMargin:-25px 0 0 0;
@@ -54,7 +54,8 @@
   $headerNavLiPadding: 8px 0 0 0;
   $titlesMargin: 154px 0 0 0;
   $titlesMargin-m1: 54px 0 0 0;
-  $mainPadding: 20px 0 0 0;
+  $mainPadding: 20px 100px 20px 100px;
+  $mainPadding-m1: 20px;
 // Borders
   $quoteBorderLeft: solid 2px $midGray;
 // URLs
@@ -104,6 +105,8 @@
   @include box-sizing(border-box);
 }
 
+/////
+
 body {
   width:100%;
   font-family: $sansSerif1;
@@ -148,6 +151,7 @@ h2 {
   color: $veryDarkBlue;
   @media screen and (max-width: $media1MaxWidth) {
     padding: $h2Padding-m1;
+    line-height: 52px;
   }
 }
 
@@ -208,7 +212,7 @@ section#titles{
   margin:$titlesMargin;
   width:100%;
   @media screen and (max-width: $media1MaxWidth) {
-    margin-top:$titlesMargin-m1;
+    margin:$titlesMargin-m1;
     width:100%;
   }
 }
@@ -255,8 +259,12 @@ nav#headerNav{
 
 section#main {
   padding: $mainPadding;
+  @media screen and (max-width: $media1MaxWidth){
+    padding: $mainPadding-m1;
+    line-height: 52px;
+  }
 
-  article  {
+  article {
     width: golden-ratio($mainWidth,-1);
     float:left;
     @media screen and (max-width: $media1MaxWidth) {
@@ -266,6 +274,9 @@ section#main {
 
     .byline{
       height: 40px;
+      @media screen and (max-width: $media1MaxWidth){
+        height: 25px
+      }
     }
 
     img.authorIcon{
@@ -284,32 +295,40 @@ section#main {
       font-size: 11px;
       float: left;
       padding-top: 15px;
-    }
-
-    time, span.timeExtraText {
-      color: $lightGray;
-      font-size: 10px;
-      padding-left: 3px;
-      float: left;
-      padding-top: 16px;
       @media screen and (max-width: $media1MaxWidth){
-        time {
-          font-size: 12px;
-          text-decoration: underline;
-          padding-left: 0;
-          padding-top: 8px;
-          font-weight: bold;
-        }
-        .timeExtraText {
-          display:none;
-        }
+        display:none;
       }
     }
+
+  time, span.timeExtraText {
+    color: #bfcbd4;
+    font-size: 10px;
+    padding-left: 3px;
+    float: left;
+    padding-top: 16px;
+  }
+  @media screen and (max-width:320px){
+    time {
+    font-size: 12px;
+    text-decoration: underline;
+    padding-left: 0;
+    margin-top: -15px;
+    font-weight: bold;
+    }
+  }
+  @media screen and (max-width:320px){
+    .timeExtraText {
+      display:none;
+    }
+  }
 
     section.articleContent{
       color: #626769;
       font-size:12px;
       line-height:18px;
+      @media screen and (max-width:320px){
+      clear:both;
+      }
     }
 
     nav.articleButtons {
@@ -346,7 +365,7 @@ section#main {
 
   section.sidebar{
     float:right;
-    width: golden-ratio($mainWidth,-2);
+    width: golden-ratio($mainWidth,-2)-1;
     padding-top: 45px;
 
     @media screen and (max-width: $media1MaxWidth){
@@ -358,25 +377,36 @@ section#main {
     }
 
     div.author{
-
       text-align:center;
       img.authorAvatar{
         height:60px;
         width:60px;
         margin-top: 8px;
         margin-right: 5px;
+        @media screen and (max-width: $media1MaxWidth){
+          height: 90px;
+          width: 90px;
+        }
       }
 
       p.authorName{
         color: #3d87c5;
         font-size: 12px;
         text-transform:uppercase;
+        @media screen and (max-width: $media1MaxWidth){
+          font-size: 18px;
+          line-height: 18px;
+        }
       }
 
       ul.authorSocialList {
         padding-top: 4px;
         display: inline-block;
         text-align: center;
+        @media screen and (max-width: $media1MaxWidth){
+          padding-top: 0px;
+
+        }
 
         li{
           list-style: none;
@@ -384,6 +414,9 @@ section#main {
           float:left;
           padding: 0px 7px 0px 7px;
           color: #bfcbd4;
+          @media screen and (max-width: $media1MaxWidth){
+            font-size: 16px;
+          }
         }
       }
     }
@@ -435,8 +468,6 @@ section#main {
   }
 }
 
-
-
 footer {
   margin: 0 auto;
   width: 100%;
@@ -448,18 +479,23 @@ footer {
     width: 100%;
     float: left;
     @media screen and (max-width: $media1MaxWidth){
-      border-top:solid 1px #e7ecf0;
-      background: $white;
+      &:last-child {
+        display:none;
+      }
     }
+    border-top:solid 1px #e7ecf0;
+    background: $white;
 
     h2{
       text-align: center;
       background: $offWhite;
       @media screen and (max-width: $media1MaxWidth) {
         font-size:32px;
-        background:#ffffff;
+        background: $white;
       }
     }
+
+
     div.popPostWrapper{
       width:25%;
       height:300px;
@@ -469,7 +505,10 @@ footer {
         float:none;
         width:280px;
         margin:15px 20px 0 20px;
+        height:205px;
       }
+      &:hover > .popPost {opacity:0.8;}
+      &:hover > .popPostTitle {color:white;}
 
       figure.popPost{
         width:100%;
@@ -481,8 +520,7 @@ footer {
           height: 205px;
           float:none;
         }
-        &:hover > .popPost {opacity:0.8;}
-        &:hover > .popPostTitle {color:white;}
+
         &#pop1{
           background:url("http://i.imgur.com/GxpP2or.png") no-repeat center center;
         }
@@ -508,8 +546,7 @@ footer {
         /*not using #82b2da* so text displays clearly */
         color: #1068A4;
         @media screen and (max-width: $media1MaxWidth){
-          section#popularPosts a:last-child {
-            display:none;
+          margin-top: -50px;
           }
         }
       }
@@ -522,7 +559,7 @@ footer {
     li {
       font-family: 'Asap', Tahoma, Arial, sans-serif;
       font-size: 11px;
-      float: left;
+      float: right;
       color: #bfcbd4;
       margin-top: 25px;
       @media screen and (max-width: $media1MaxWidth){
@@ -531,9 +568,7 @@ footer {
         color: #a2b2bd;
         margin:0 0 0 0;
       }
-      &#tiyLogo{
-        margin-top:10px;
-      }
+
       &#tiycompanyText {
         float: left;
         @media screen and (max-width: $media1MaxWidth){
@@ -558,7 +593,7 @@ footer {
           }
         }
       }
-      &#navFooterMenu {
+      &.navFooterMenu {
         float: right;
         padding: 0 9px 0 9px;
         border-left: $lightGray solid 1px;
@@ -576,4 +611,3 @@ footer {
       }
     }
   }
-}
